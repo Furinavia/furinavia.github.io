@@ -154,8 +154,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>lyt生日倒计时！</h1>
-            <div class="birthday-info">lyt的生日是：9月4日</div>
+            <h1>zh生日倒计时！</h1>
+            <div class="birthday-info">zh的生日是：3月14日</div>
             <div class="current-date">今天是：当地时间<span id="current-date"></span></div>
         </div>
         
@@ -174,7 +174,7 @@
             const currentYear = now.getFullYear();
             
             // 设置生日日期（9月4日）
-            const birthdayThisYear = new Date(currentYear, 8, 4); // 月份从0开始，8代表9月
+            const birthdayThisYear = new Date(currentYear, 2, 14); // 月份从0开始，8代表9月
             
             // 判断今年生日是否已过
             let nextBirthday;
@@ -182,7 +182,7 @@
                 nextBirthday = birthdayThisYear;
             } else {
                 // 如果今年生日已过，则计算明年生日（自动处理闰年）
-                nextBirthday = new Date(currentYear + 1, 8, 4);
+                nextBirthday = new Date(currentYear + 1, 2, 14);
             }
             
             // 计算时间差（毫秒）
@@ -199,12 +199,12 @@
             document.getElementById('current-time').textContent = now.toLocaleTimeString('zh-CN');
             
             // 如果是生日当天（0点之后）
-            if (now.getMonth() === 8 && now.getDate() === 4) {
+            if (now.getMonth() === 2 && now.getDate() === 14) {
                 document.getElementById('countdown-display').innerHTML = `
                     <div class="message">
                         生日快乐！🎂
                     </div>
-                    <p>今天是lyt的生日，让我们祝她生日快乐！</p>
+                    <p>今天是zh的生日，让我们祝她生日快乐！</p>
                 `;
                 return;
             }
@@ -217,7 +217,7 @@
             
             // 更新倒计时显示
             document.getElementById('countdown-display').innerHTML = `
-                <h2>距离lyt的下一个生日还有：</h2>
+                <h2>距离zh的下一个生日还有：</h2>
                 <div class="countdown-container">
                     <div class="time-unit">
                         <div class="time-value">${days}</div>
@@ -249,3 +249,4 @@
     </script>
 </body>
 </html>
+
