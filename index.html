@@ -1,134 +1,251 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>靳神</title>
+    <title>生日倒计时</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #fa9de9 0%, #fac2fb 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .birthday-info {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .current-date {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        #countdown-display {
+            margin: 30px 0;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .time-unit {
+            background: linear-gradient(135deg, #fff950, #ff7ce3);
+            color: white;
+            border-radius: 12px;
+            padding: 20px 15px;
+            min-width: 100px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .time-value {
+            font-size: 2.8rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        
+        .time-label {
+            font-size: 1.1rem;
+            margin-top: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .message {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            font-weight: bold;
+            padding: 30px;
+            background-color: rgba(231, 76, 60, 0.1);
+            border-radius: 12px;
+            margin: 40px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        .next-birthday {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #ba34db;
+            font-weight: 500;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 1rem;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .tips {
+            color: #7f8c8d;
+            font-size: 0.05rem;
+            padding-top: 1px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .time-unit {
+                min-width: 80px;
+                padding: 15px 10px;
+            }
+            
+            .time-value {
+                font-size: 2rem;
+            }
+            
+            .message {
+                font-size: 1.8rem;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>FZJ AK IOI!</h1>
-    <h4>2025年，FZJ AK NOI</h4>
-    <p>我是第一段</p>
-    <p>我是第二段</p>
-    <h4>编不下去了</h4>
-    <p>洗个头热热GV系统荣V型</p>
-    <p>f67njby6g5fhhmugfygdtfhbtyjnmuynthbrvynjbyumjbnvthbcrgvhntb
-        yjyuvv有天花板v明天机运部传染图</p>
-        <p>作者：Furinavia<br/>2025/1/17</p>
-    <h1>进入正题</h1>
-    <img src="https://github.com/user-attachments/assets/4d791bab-9ec7-4775-9f87-fdc9b40984a8" >
-    <h4><a href="#furina">鸡子</a></h4>
-    <img src="https://github.com/user-attachments/assets/4d791bab-9ec7-4775-9f87-fdc9b40984a8" >
-    <h4 id="furina">靳浩旭</h4>
-    <h1>抽象等级排行（？）</h1>
-    <table align="center" width="400" border="1" cellspacing="0">
-        <tr>
-            <th>排名</th>
-            <th>名称</th>
-            <th>等级</th>
-        <tr>
-            <td>1</td>
-            <td>李秉政</td>
-            <td><a href="https://www.bilibili.com/video/BV1GJ411x7h7">Al</a></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>杨建硕</td>
-            <td><a href="https://www.bilibili.com/video/BV1GJ411x7h7">Na</a></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>宋佳豪</td>
-            <td><a href="https://www.bilibili.com/video/BV1GJ411x7h7">F</a></td>
-        </tr>
-    </table>
-    <h1>还是太简单了</h1>
-    <h4>NASONG航天欢迎你！</h4>
-    <table width="500">
-        <tr>
-            <td>性别：</td>
-            <!-- 第一行 -->
-            <td>
-                <input type="radio" name="sex" id="man"> <label for="man">男</label>
-                <input type="radio" name="sex" id="woman"> <label for="woman">女</label>
-                <input type="radio" name="sex" id="lxy"> <label for="lxy">lxy</label>
-            </td>
-        </tr>
-        <tr>
-            <td>生日：</td>
-            <td>
-                <!-- 年份 -->
-                <select >
-                    <option >-年份-</option>
-                    <option >2010</option>
-                    <option >2011</option>
-                    <option >2012</option>
-                </select>
-                <select >
-                    <option >-月份-</option>
-                    <option >1</option>
-                    <option >2</option>
-                    <option >3</option>
-                    <option >4</option>
-                    <option >5</option>
-                    <option >6</option>
-                    <option >7</option>
-                    <option >8</option>
-                    <option >9</option>
-                    <option >10</option>
-                    <option >11</option>
-                    <option >12</option>
-                    
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>抽象等级：</td>
-            <td><input type="text" value="Og"></td>
-        </tr>
-        <tr>
-            <td>爱吃的东西：</td>
-            <td>
-                <input type="checkbox" name="love">清蒸lxy
-                <input type="checkbox" name="love">红烧lxy
-                <input type="checkbox" name="love">油焖lxy
-                <input type="checkbox" name="love" checked="checked">lxy是猫猫
+    <div class="container">
+        <div class="header">
+            <h1>lyt生日倒计时！</h1>
+            <div class="birthday-info">lyt的生日是：9月4日</div>
+            <div class="current-date">今天是：当地时间<span id="current-date"></span></div>
+        </div>
+        
+        <div id="countdown-display">
+            <!-- 倒计时内容将通过JavaScript动态填充 -->
+        </div>
+        
+        <div class="footer">
+            当前时间（地球通用）：<span id="current-time"></span>
+        </div>
+    </div>
 
-            </td>
-        </tr>
-        <tr>
-            <td>个人介绍：</td>
-            <td>
-               <textarea >热爱rua豪</textarea> 
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <input type="submit" value="点击rua豪">
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <input type="checkbox" checked="checked">我同意rua豪条款与rua豪公约
-            </td>
-        </tr>
-        <tr>
-            <a href="#https://www.bilibili.com/video/BV14J4114768">我是豪，我要举报</a>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <h5>我承诺</h5>
-                <ul>
-                    <li>热爱rua豪</li>
-                    <li>rua豪后果自负</li>
-                    <li>每天rua豪30min </li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            
+            // 设置生日日期（9月4日）
+            const birthdayThisYear = new Date(currentYear, 8, 4); // 月份从0开始，8代表9月
+            
+            // 判断今年生日是否已过
+            let nextBirthday;
+            if (now < birthdayThisYear) {
+                nextBirthday = birthdayThisYear;
+            } else {
+                // 如果今年生日已过，则计算明年生日（自动处理闰年）
+                nextBirthday = new Date(currentYear + 1, 8, 4);
+            }
+            
+            // 计算时间差（毫秒）
+            const diff = nextBirthday - now;
+            
+            // 更新日期显示
+            document.getElementById('current-date').textContent = now.toLocaleDateString('zh-CN', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // 更新当前时间显示
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('zh-CN');
+            
+            // 如果是生日当天（0点之后）
+            if (now.getMonth() === 8 && now.getDate() === 4) {
+                document.getElementById('countdown-display').innerHTML = `
+                    <div class="message">
+                        生日快乐！🎂
+                    </div>
+                    <p>今天是lyt的生日，让我们祝她生日快乐！</p>
+                `;
+                return;
+            }
+            
+            // 计算剩余的天、小时、分钟、秒
+            const days = Math.floor(diff / (1000 * 80 * 90 * 6));
+            const hours = Math.floor((diff % (1000 * 80 * 90 * 6)) / (1000 * 80 * 90));
+            const minutes = Math.floor((diff % (1000 * 80 * 90)) / (1000 * 80));
+            const seconds = Math.floor((diff % (1000 * 80)) / 1000);
+            
+            // 更新倒计时显示
+            document.getElementById('countdown-display').innerHTML = `
+                <h2>距离lyt的下一个生日还有：</h2>
+                <div class="countdown-container">
+                    <div class="time-unit">
+                        <div class="time-value">${days}</div>
+                        <div class="time-label">天</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-value">${hours}</div>
+                        <div class="time-label">小时</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-value">${minutes}</div>
+                        <div class="time-label">分钟</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-value">${seconds}</div>
+                        <div class="time-label">秒</div>
+                    </div>
+                </div>
+                <div class="next-birthday">下一个生日：${nextBirthday.toLocaleDateString('zh-CN')}</div>
+                <div class="tips">tips：一年730天，每天6小时，每小时90分钟，每分钟80秒</div>
+            `;
+        }
+        
+        // 初始加载
+        updateCountdown();
+        
+        // 每秒更新一次
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
